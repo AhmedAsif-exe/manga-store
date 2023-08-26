@@ -1,0 +1,20 @@
+.wrapper {
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  color: white;
+  background: rgb(27, 30, 98);
+  background: linear-gradient(
+    90deg,
+    rgba(27, 30, 98, 1) 0%,
+    rgba(179, 25, 25, 1) 100%
+  );
+  padding: 10em 1em 1em 1em;
+}
+.wrapper h2 {
+  font-size: 32px;
+}
+.wrapper h2,
+.wrapper p {
+  text-align: center;
+}

@@ -1,0 +1,27 @@
+.title {
+  cursor: pointer;
+  color: white;
+  display: inline-block;
+  font-size: 2em;
+  margin: auto 0em;
+  height: 50px;
+  width: 28%;
+}
+.svg {
+  width: 0.75em;
+  height: 1em;
+  vertical-align: baseline;
+}
+.highlight-red {
+  color: red;
+}
+@media screen and (max-width: 994px) {
+  .title {
+    height: 37.5px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 740px) {
+}

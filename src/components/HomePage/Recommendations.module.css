@@ -1,0 +1,91 @@
+.container {
+  width: 100%;
+
+  height: 100vh;
+  margin: 0;
+}
+
+.dataHolder {
+  position: absolute;
+  top: 0;
+  padding: 2.5em;
+  padding-top: 8em;
+  background-color: rgba(0, 0, 0, 0.379);
+  width: 40%;
+  min-height: 100%;
+  z-index: 1;
+}
+.background {
+  width: 100%;
+  height: 100%;
+}
+.dataHolder h2,
+.synopsis,
+.author {
+  color: white;
+}
+
+.dataHolder h2 {
+  margin: 0 auto;
+  /* margin: 0em 1em 0 3em; */
+  font-weight: 600;
+  font-size: 40px;
+  color: red;
+}
+.synopsis {
+  margin-top: 10px;
+  font-weight: bold;
+  line-height: 35px;
+  font-size: 28px;
+}
+.author {
+  font-size: 20px;
+  font-style: italic, bold;
+  font-weight: bolder;
+}
+.price {
+  margin: 0.5em 0;
+  font-size: 40px;
+  font-weight: bold;
+  color: #662105;
+}
+@media screen and (max-width: 970px) {
+  .dataHolder h2 {
+    font-size: 35px;
+  }
+  .price {
+    font-size: 35px;
+  }
+  .synopsis {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .dataHolder h2 {
+    font-size: 30px;
+  }
+  .price {
+    font-size: 30px;
+  }
+  .synopsis {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .dataHolder {
+    width: 100%;
+  }
+  .dataHolder h2,
+  .synopsis,
+  .author,
+  .price {
+    text-align: center;
+  }
+  .button {
+    margin: 0 auto;
+  }
+  .synopsis {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,43 @@
+.cartIcon {
+  color: white;
+  width: 2em;
+  height: 2em;
+  margin: auto 0;
+  transition: color 300ms ease-in;
+}
+
+.cartIcon:hover,
+.highlight-red {
+  color: red;
+}
+.link {
+  margin: auto 0;
+  height: fit-content;
+  text-decoration: none;
+  color: white;
+  height: 2em;
+}
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    color: white;
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+    color: red;
+  }
+  100% {
+    transform: scale(1);
+    color: white;
+  }
+}

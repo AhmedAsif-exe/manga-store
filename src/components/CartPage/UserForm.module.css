@@ -1,0 +1,91 @@
+.form {
+  text-align: left;
+}
+.container-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form button {
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+.form button:hover,
+.form button:active {
+  color: white;
+}
+
+.form button:disabled:hover {
+  cursor: not-allowed;
+  background-color: #8d6a5d;
+}
+.form .button--alt {
+  color: white;
+}
+.form .button--alt {
+  color: white;
+}
+.input {
+  margin: 0.5rem;
+}
+.input label,
+.input input,
+textarea {
+  color: white;
+  background-color: transparent;
+  display: block;
+}
+
+.input label {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.input select {
+  color: white;
+  background-color: transparent;
+  margin: 0.25rem 0;
+  height: 60%;
+  width: 30%;
+  min-width: 100px;
+}
+.input input,
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font: inherit;
+  padding-left: 0.5rem;
+}
+
+.input input:focus,
+.input textarea:focus,
+.input select:focus {
+  background-color: #d92c262d;
+}
+.invalid input,
+.invalid textarea {
+  border: 1px solid #b40e0e;
+  background-color: #e57b7b;
+}
+
+.invalid input:focus,
+.invalid textarea:focus {
+  border-color: #b40e0e;
+  background-color: #b40e0e;
+}
+
+.error-text {
+  color: #f07e7e;
+}
+@media screen and (max-width: 460px) {
+  .input:nth-child(4) {
+    margin-bottom: 4px;
+  }
+}
