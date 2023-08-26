@@ -19,6 +19,10 @@
   font-size: 32px;
 }
 .container p {
+  height: 5.2em;
+  width: 5.2em;
+  margin: auto;
+  margin-top: 1em;
   text-align: center;
 }
 @keyframes ripple {
@@ -36,6 +40,9 @@
   height: 5.2rem;
   margin: auto;
   margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .multi-ripple div {
   position: absolute;
