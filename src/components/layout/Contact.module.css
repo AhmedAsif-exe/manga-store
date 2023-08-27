@@ -34,3 +34,10 @@
 .svg:hover {
   color: red;
 }
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 35vh 0;
+    height: 30vh;
+  }
+}
