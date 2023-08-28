@@ -37,6 +37,9 @@ const router = createBrowserRouter([
         element: <AuthPage />,
         action: authPageAction,
       },
+      {
+        path: ":id",
+      },
     ],
   },
 ]);

@@ -1,6 +1,7 @@
 import classes from "./ResultsContainer.module.css";
 import { useSearchParams } from "react-router-dom";
 import Products from "./Products";
+import PageTemplate from "../utils/PageTemplate";
 const ResultsContainer = (props) => {
   const [searchParams] = useSearchParams();
   const title = searchParams.get("Title");
@@ -16,14 +17,15 @@ const ResultsContainer = (props) => {
     };
   });
   return (
-    <div className={classes.container}>
-      <h2>
-        {results.length > 0
+    <PageTemplate
+      title={
+        results.length > 0
           ? title
             ? `Search Results for ${title}...`
             : "Popular Releases..."
-          : "No Results Found..."}
-      </h2>
+          : "No Results Found..."
+      }
+    >
       <div className={classes.grid}>
         {results.map((result) => (
           <Products
@@ -32,7 +34,7 @@ const ResultsContainer = (props) => {
           />
         ))}
       </div>
-    </div>
+    </PageTemplate>
   );
 };
 

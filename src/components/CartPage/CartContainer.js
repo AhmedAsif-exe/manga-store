@@ -1,15 +1,14 @@
 import classes from "./CartContainer.module.css";
 import Card from "../utils/Card";
 import CartCard from "./CartCard";
-import { redirect } from "react-router-dom";
+import PageTemplate from "../utils/PageTemplate";
 const CartContainer = () => {
   return (
-    <div className={classes.container}>
-      <h2>Your Cart..</h2>
+    <PageTemplate title="Your Cart..">
       <Card className={classes.card}>
         <CartCard />
       </Card>
-    </div>
+    </PageTemplate>
   );
 };
 export default CartContainer;
