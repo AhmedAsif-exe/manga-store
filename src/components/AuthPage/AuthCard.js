@@ -1,10 +1,31 @@
 import classes from "./AuthCard.module.css";
 import { Link, Form, useNavigation } from "react-router-dom";
+import useInput from "../../Hooks/use_input";
 const AuthCard = ({ logIn, data }) => {
   const navigation = useNavigation();
   const submitting = navigation.state === "submitting";
+
+  const {
+    hasError: emailHasError,
+    onChangeHandler: emailOnChangeHandler,
+    onBlurHandler: emailOnBlurHandler,
+  } = useInput((data) => data.includes("@"));
+
+  const {
+    hasError: passwordHasError,
+    onChangeHandler: passwordOnChangeHandler,
+    onBlurHandler: passwordOnBlurHandler,
+  } = useInput((data) => data.length > 8);
   let credentialErrors = {};
   if (data && data.status === 422) credentialErrors = data.errors;
+
+  const formIsValid = !emailHasError && !passwordHasError;
+  const emailInputClasses = `${classes.form__line} ${
+    emailHasError ? classes["input_invalid"] : ""
+  }`;
+  const passwordInputClasses = `${classes.form__line} ${
+    passwordHasError ? classes["input_invalid"] : ""
+  }`;
   return (
     <div className={classes.box}>
       <span className={classes.box__borderline}></span>
@@ -19,31 +40,39 @@ const AuthCard = ({ logIn, data }) => {
         <div className={classes.form__box}>
           <input
             className={classes.form__input}
-            type="email"
+            type="text"
             name="email"
-            required="required"
+            required
+            onChange={emailOnChangeHandler}
+            onBlur={emailOnBlurHandler}
           />
           <span className={classes.form__span}>Email</span>
-          <i className={classes.form__line}></i>
+          <i className={emailInputClasses}></i>
         </div>
         {credentialErrors.email && (
           <p className={classes.invalid}>{credentialErrors.email}</p>
         )}
-
+        {emailHasError && (
+          <p className={classes.invalid}>Must Include '@' symbol</p>
+        )}
         <div className={classes.form__box}>
           <input
             className={classes.form__input}
             type="password"
             name="password"
-            required="required"
+            required
+            onChange={passwordOnChangeHandler}
+            onBlur={passwordOnBlurHandler}
           />
           <span className={classes.form__span}>Password</span>
-          <i className={classes.form__line}></i>
+          <i className={passwordInputClasses}></i>
         </div>
         {credentialErrors.password && (
           <p className={classes.invalid}>{credentialErrors.password}</p>
         )}
-
+        {passwordHasError && (
+          <p className={classes.invalid}>length must be greater than 8</p>
+        )}
         <div className={classes.form__links}>
           <Link
             className={classes.form__link}
@@ -55,7 +84,7 @@ const AuthCard = ({ logIn, data }) => {
         <button
           className={classes.form__submit}
           type="submit"
-          disabled={submitting}
+          disabled={submitting || !formIsValid}
         >
           {submitting
             ? logIn
