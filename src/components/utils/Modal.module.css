@@ -5,23 +5,25 @@
   width: 100%;
   height: 100vh;
   z-index: 20;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .modal {
   position: fixed;
-  top: 20vh;
+  top: 30vh;
   left: 5%;
   width: 90%;
   background: linear-gradient(
     90deg,
-    rgba(179, 25, 25, 1) 0%,
-    rgba(27, 30, 98, 1) 82%
+    rgba(73, 39, 97, 1) 31%,
+    rgba(42, 43, 118, 1) 100%,
+    rgba(80, 38, 92, 1) 100%,
+    rgba(179, 25, 25, 1) 100%
   );
   padding: 1rem;
   border-radius: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  z-index: -1;
+  z-index: 30;
   animation: slide-down 300ms ease-out forwards;
 }
 

@@ -15,7 +15,7 @@ const AuthCard = ({ logIn, data }) => {
     hasError: passwordHasError,
     onChangeHandler: passwordOnChangeHandler,
     onBlurHandler: passwordOnBlurHandler,
-  } = useInput((data) => data.length > 8);
+  } = useInput((data) => data.length > 7);
   let credentialErrors = {};
   if (data && data.status === 422) credentialErrors = data.errors;
 
