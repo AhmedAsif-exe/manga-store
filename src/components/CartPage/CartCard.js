@@ -9,7 +9,11 @@ const CartCard = (props) => {
   const [showForm, setShowForm] = useState(false);
   const navigate = useNavigate();
   const cartCtx = useContext(CartContext);
-  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+  const totalAmount = `$${
+    cartCtx.totalAmount.toFixed(2) === "-0.00"
+      ? "0.00"
+      : cartCtx.totalAmount.toFixed(2)
+  }`;
   const hasItems = cartCtx.items.length > 0;
 
   const cartItemRemoveHandler = (id) => {

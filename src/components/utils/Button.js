@@ -9,6 +9,8 @@ const Button = (props) => {
     <button
       className={`${buttonClass} btn `}
       onClick={props.clickHandler || null}
+      disabled={props.disabled}
+      type={props.type || null}
     >
       <Dot svg={classes.svg} />
       <p>{props.children}</p>

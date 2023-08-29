@@ -1,0 +1,22 @@
+.synopsis {
+  margin-top: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+.price {
+  font-size: 20px;
+  font-style: bolder;
+}
+.synopsis a {
+  color: rgb(129, 119, 119);
+  text-decoration: none;
+}
+.synopsis a:hover {
+  text-decoration: underline;
+}
+.author {
+  font-size: small;
+  font-style: italic;
+}

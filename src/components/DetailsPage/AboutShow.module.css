@@ -1,0 +1,31 @@
+.about-show {
+  padding: 4px;
+  border: 2px solid rgb(59, 58, 58);
+}
+.about-show img {
+  display: block;
+  width: 100%;
+  height: fit-content;
+
+  border-radius: 2px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid rgb(59, 58, 58);
+}
+.about-show h3 {
+  padding: 4px 0;
+  border-bottom: 2px solid rgb(59, 58, 58);
+}
+.about-show p {
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+.heading,
+.attributes {
+  font-weight: 700;
+}
+.heading {
+  font-size: 15px;
+}
+.attributes {
+  font-size: 12px;
+}

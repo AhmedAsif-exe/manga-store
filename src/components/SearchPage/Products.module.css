@@ -3,7 +3,6 @@
   height: fit-content;
   margin: 0 auto;
   margin-bottom: 2em;
-  background: rgb(27, 30, 98);
   background: linear-gradient(
     90deg,
     rgba(27, 30, 98, 1) 0%,
@@ -17,14 +16,6 @@
 .container img {
   width: 100%;
   height: 350px;
-}
-
-.synopsis {
-  margin-top: 1em;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  font-size: 15px;
 }
 
 .container button {
@@ -44,22 +35,6 @@
   margin-bottom: 0.1em;
   padding: 0;
 }
-.author {
-  font-size: small;
-  font-style: italic;
-}
-
-.price {
-  font-size: 20px;
-  font-style: bolder;
-}
-.synopsis a {
-  color: rgb(129, 119, 119);
-  text-decoration: none;
-}
-.synopsis a:hover {
-  text-decoration: underline;
-}
 
 .quantity {
   background-color: transparent;
@@ -67,16 +42,17 @@
   height: 3rem;
   border-radius: 50%;
   font: inherit;
-
   display: flex;
   align-items: center;
 }
 
 .quantity input {
+  width: 2em;
   color: white;
   background-color: rgba(61, 61, 66, 0);
 }
 .quantity label {
+  /* width: 1em; */
   font-weight: bold;
   margin-right: 1rem;
 }

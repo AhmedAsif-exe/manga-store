@@ -4,7 +4,9 @@
   height: 100vh;
   margin: 0;
 }
-
+.link {
+  all: unset;
+}
 .dataHolder {
   position: absolute;
   top: 0;

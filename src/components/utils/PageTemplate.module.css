@@ -1,9 +1,8 @@
-.container {
+.screen {
   width: 100%;
   height: fit-content;
   min-height: 100vh;
   color: white;
-  background: rgb(27, 30, 98);
   background: linear-gradient(
     90deg,
     rgba(27, 30, 98, 1) 0%,
@@ -12,7 +11,7 @@
   padding: 6em 1em 1em 1em;
 }
 
-.container h2 {
+.screen h2 {
   margin-left: 1em;
   margin-bottom: 1.5em;
   font-size: 32px;

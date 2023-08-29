@@ -1,7 +1,7 @@
 import { Await, defer, json, useLoaderData } from "react-router-dom";
 import ResultsContainer from "../components/SearchPage/ResultsContainer";
 import { Suspense } from "react";
-import Loading from "../components/SearchPage/Loading";
+import Loading from "../components/utils/Loading";
 const SearchPage = () => {
   const { dataSet } = useLoaderData();
 

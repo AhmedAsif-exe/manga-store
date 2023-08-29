@@ -7,6 +7,7 @@ import AuthPage, { action as authPageAction } from "./pages/AuthPage";
 import { tokenLoader } from "./components/utils/auth";
 import { logoutAction } from "./pages/Logout";
 import ErrorPage from "./pages/ErrorPage";
+import DetailsPage, { loader as detailsLoader } from "./pages/DetailsPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,7 +39,9 @@ const router = createBrowserRouter([
         action: authPageAction,
       },
       {
-        path: ":id",
+        path: "manga/:id",
+        element: <DetailsPage />,
+        loader: detailsLoader,
       },
     ],
   },

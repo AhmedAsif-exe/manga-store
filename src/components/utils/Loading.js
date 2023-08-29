@@ -1,14 +1,14 @@
 import classes from "./Loading.module.css";
+import PageTemplate from "./PageTemplate";
 const Loading = () => {
   return (
-    <div className={classes.container}>
-      <h2>Searching...</h2>
+    <PageTemplate title={"Searching..."}>
       <div className={classes["multi-ripple"]}>
         <div></div>
         <div></div>
       </div>
-      <p>Loading...</p>
-    </div>
+      <p className={classes.status}>Loading...</p>
+    </PageTemplate>
   );
 };
 export default Loading;

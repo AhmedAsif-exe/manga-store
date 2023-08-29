@@ -3,7 +3,7 @@ import SearchIcon from "./SearchIcon";
 const SearchBar = () => {
   return (
     <div className={classes.container}>
-      <form action="search" className={classes.search}>
+      <form action="/search" className={classes.search}>
         <input
           className={classes["search__input"]}
           type="search"

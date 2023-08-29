@@ -1,0 +1,54 @@
+.achievements-synopsis {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  border: 2px solid rgb(59, 58, 58);
+  border-left: 0;
+}
+
+.quantity {
+  background-color: transparent;
+  min-width: fit-content;
+  height: 3rem;
+  border-radius: 50%;
+  font: inherit;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.quantity input {
+  width: 3em;
+  text-align: center;
+  color: white;
+  background-color: rgba(61, 61, 66, 0);
+}
+.quantity label {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.add {
+  background: linear-gradient(
+    90deg,
+    rgba(73, 39, 97, 1) 31%,
+    rgba(42, 43, 118, 1) 100%,
+    rgba(80, 38, 92, 1) 100%,
+    rgba(179, 25, 25, 1) 100%
+  );
+}
+.error-text {
+  color: #cf770b;
+  font-size: small;
+}
+.form {
+  display: flex;
+  min-width: fit-content;
+  justify-content: space-between;
+  margin: auto 1em;
+  align-items: center;
+}
+@media screen and (max-width: 815px) {
+  .achievements-synopsis {
+    border: 2px solid rgb(59, 58, 58);
+  }
+}

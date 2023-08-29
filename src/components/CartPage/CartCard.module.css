@@ -22,7 +22,6 @@
 .actions button {
   font: inherit;
   cursor: pointer;
-  background: rgb(27, 30, 98);
   background: linear-gradient(
     90deg,
     rgba(27, 30, 98, 1) 0%,

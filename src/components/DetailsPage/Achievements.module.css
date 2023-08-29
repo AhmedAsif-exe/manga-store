@@ -1,0 +1,34 @@
+.achievements {
+  display: flex;
+  height: 20%;
+  min-height: 100px;
+  border-bottom: 2px solid rgb(59, 58, 58);
+  justify-content: space-evenly;
+}
+.achievements-heading {
+  font-size: 25px;
+  display: block;
+  font-weight: 700;
+}
+.achievement-fields {
+  align-self: center;
+  text-align: center;
+}
+@media screen and (max-width: 575px) {
+  .achievements-heading {
+    font-size: 18px;
+  }
+  .achievement-fields {
+    border: 1px solid rgb(59, 58, 58);
+    border-radius: 0.5px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .achievements-heading {
+    font-size: 15px;
+  }
+  .achievement-fields {
+    font-size: 11px;
+  }
+}

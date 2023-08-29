@@ -1,0 +1,18 @@
+.heading {
+  font-weight: 700;
+  font-size: 20px;
+}
+.synopsis h3 {
+  padding: 6px 0;
+  border-bottom: 2px solid rgb(59, 58, 58);
+}
+.story {
+  height: 175px;
+  overflow: auto;
+  border-bottom: 2px solid rgb(59, 58, 58);
+}
+.background {
+  height: 55px;
+  overflow: auto;
+  border-bottom: 2px solid rgb(59, 58, 58);
+}
