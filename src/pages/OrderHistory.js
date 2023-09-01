@@ -31,6 +31,7 @@ const deferLoader = async (request) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
       },
       body: JSON.stringify({ email }),
       mode: "cors",
@@ -51,10 +52,12 @@ export function loader({ request }) {
 export async function action({ request }) {
   const order = Object.fromEntries(await request.formData());
   const email = localStorage.getItem("email");
+  const token = localStorage.getItem("token");
   const response = await fetch("http://localhost:8080/add-orders", {
     method: request.method,
     headers: {
       "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
     },
     body: JSON.stringify({ email, order }),
     mode: "cors",
