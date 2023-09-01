@@ -31,7 +31,6 @@ export function tokenLoader() {
 
 export function checkAuthLoader() {
   const token = getAuthToken();
-
   if (!token) {
     return redirect("/auth");
   }

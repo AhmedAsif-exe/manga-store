@@ -8,6 +8,10 @@ import { tokenLoader } from "./components/utils/auth";
 import { logoutAction } from "./pages/Logout";
 import ErrorPage from "./pages/ErrorPage";
 import DetailsPage, { loader as detailsLoader } from "./pages/DetailsPage";
+import OrdersHistory, {
+  loader as orderLoader,
+  action as orderAction,
+} from "./pages/OrderHistory";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +46,12 @@ const router = createBrowserRouter([
         path: "manga/:id",
         element: <DetailsPage />,
         loader: detailsLoader,
+      },
+      {
+        path: "orders",
+        element: <OrdersHistory />,
+        loader: orderLoader,
+        action: orderAction,
       },
     ],
   },

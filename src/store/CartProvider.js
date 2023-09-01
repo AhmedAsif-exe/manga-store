@@ -104,6 +104,27 @@ const CartProvider = (props) => {
   const clearCartHandler = () => {
     dispatchCartAction({ type: "CLEAR" });
   };
+
+  const generateSummaryHandler = () => {
+    let summary = cartContext.items.reduce(
+      (accumilator, item) =>
+        accumilator +
+        `${item.amount} ${item.amount === 1 ? "copy" : "copies"} of "${
+          item.title
+        }($${item.price.toFixed(2)})". `,
+      ""
+    );
+    const moment = new Date();
+    const date = moment.toLocaleDateString();
+    const time = moment.toLocaleTimeString();
+
+    return {
+      summary: summary,
+      time,
+      date,
+      total: `$${cartContext.totalAmount}`,
+    };
+  };
   const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
@@ -111,6 +132,7 @@ const CartProvider = (props) => {
     removeItem: removeItemFromCartHandler,
     clearCart: clearCartHandler,
     incrementItem: incrementItemToCartHandler,
+    generateSummary: generateSummaryHandler,
   };
 
   return (

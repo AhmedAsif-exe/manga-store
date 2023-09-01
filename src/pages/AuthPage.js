@@ -20,16 +20,13 @@ export async function action({ request }) {
     password: data.get("password"),
   };
 
-  const response = await fetch(
-    "https://authentication-backend.cyclic.cloud/" + mode,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(authData),
-    }
-  );
+  const response = await fetch("http://localhost:8080/" + mode, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(authData),
+  });
 
   if (response.status === 422 || response.status === 401) {
     return response;
@@ -42,8 +39,11 @@ export async function action({ request }) {
   const resData = await response.json();
 
   const token = resData.token;
+  const email = resData.email;
 
   localStorage.setItem("token", token);
+  localStorage.setItem("email", email);
+
   const expiration = new Date();
   expiration.setHours(expiration.getHours() + 1);
   localStorage.setItem("expiration", expiration.toISOString());

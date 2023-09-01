@@ -1,7 +1,7 @@
 .container {
-  padding: 2rem;
+  padding: 2rem 0.5rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .container p {
   margin-top: 1em;
@@ -26,4 +26,7 @@
   width: 5em;
   display: block;
   color: inherit;
+}
+.link {
+  all: unset;
 }
