@@ -27,17 +27,23 @@ const deferLoader = async (request) => {
   const email = localStorage.getItem("email");
 
   try {
-    const response = await fetch("http://localhost:8080" + mode, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + token,
-      },
-      body: JSON.stringify({ email }),
-      mode: "cors",
-    });
+    const response = await fetch(
+      "https://authentication-backend.cyclic.cloud" + mode,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token,
+        },
+        body: JSON.stringify({ email }),
+        mode: "cors",
+      }
+    );
     if (!response.ok) {
-      throw json({ status: 500 }, { message: "Something Went Wrong" });
+      throw json(
+        { status: response.status },
+        { message: "Something Went Wrong" }
+      );
     }
     const data = await response.json();
     return data.orders;
@@ -53,14 +59,17 @@ export async function action({ request }) {
   const order = Object.fromEntries(await request.formData());
   const email = localStorage.getItem("email");
   const token = localStorage.getItem("token");
-  const response = await fetch("http://localhost:8080/add-orders", {
-    method: request.method,
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + token,
-    },
-    body: JSON.stringify({ email, order }),
-    mode: "cors",
-  });
+  const response = await fetch(
+    "https://authentication-backend.cyclic.cloud/add-orders",
+    {
+      method: request.method,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+      body: JSON.stringify({ email, order }),
+      mode: "cors",
+    }
+  );
   return null;
 }

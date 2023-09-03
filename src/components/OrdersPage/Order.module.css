@@ -17,6 +17,7 @@
   font-style: italic;
 }
 
+.heading,
 .price {
   margin-top: 0.25rem;
   font-weight: bold;

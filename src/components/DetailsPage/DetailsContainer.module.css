@@ -2,6 +2,7 @@
   height: fit-content;
   min-height: 70%;
   margin: 0 2em;
+  width: 100%;
   background: linear-gradient(
     90deg,
     rgba(179, 25, 25, 0.2863270308123249) 0%,
@@ -38,5 +39,10 @@
 @media screen and (max-width: 450px) {
   .container {
     margin: 0 0.5em;
+  }
+}
+@media screen and (max-width: 347px) {
+  .container {
+    margin: 0 0.3em;
   }
 }

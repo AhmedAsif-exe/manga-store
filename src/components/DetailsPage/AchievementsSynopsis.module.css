@@ -35,6 +35,9 @@
     rgba(80, 38, 92, 1) 100%,
     rgba(179, 25, 25, 1) 100%
   );
+  width: 40%;
+  display: flex;
+  justify-content: center;
 }
 .error-text {
   color: #cf770b;
@@ -47,8 +50,21 @@
   margin: auto 1em;
   align-items: center;
 }
+.form p {
+  text-align: center;
+  margin: 0;
+  padding: 0 10px;
+}
 @media screen and (max-width: 815px) {
   .achievements-synopsis {
     border: 2px solid rgb(59, 58, 58);
+  }
+}
+@media screen and (max-width: 651px) {
+  .form {
+    flex-direction: column;
+  }
+  .form p {
+    padding: 10px 0;
   }
 }

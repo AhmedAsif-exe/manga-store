@@ -103,12 +103,12 @@
     margin: 100px 50px;
     width: fit-content;
   }
-}
-
-@media screen and (max-width: 500px) {
   .image img {
     display: none;
   }
+}
+
+@media screen and (max-width: 500px) {
   .dataholder {
     width: 100%;
   }

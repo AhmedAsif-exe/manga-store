@@ -14,6 +14,9 @@ const ErrorPage = (props) => {
     title = "Not Found!";
     message = "Could Not Find Resources or page";
   }
+  if (error.status === 401)
+    message = "You Are Not Authorized For The Following Action";
+  console.log(error.status);
   return (
     <Layout>
       <div className={classes.wrapper}>

@@ -12,21 +12,27 @@ const Contact = (props) => {
         classes.container
       }`}
     >
-      <Discord
-        className={`${classes.svg} ${
-          scrolled ? classes.svgScroll : classes.svgNotScroll
-        }`}
-      />
-      <Instagram
-        className={`${classes.svg} ${
-          scrolled ? classes.svgScroll : classes.svgNotScroll
-        }`}
-      />
-      <Facebook
-        className={`${classes.svg} ${
-          scrolled ? classes.svgScroll : classes.svgNotScroll
-        }`}
-      />
+      <a href="https://discord.com/">
+        <Discord
+          className={`${classes.svg} ${
+            scrolled ? classes.svgScroll : classes.svgNotScroll
+          }`}
+        />
+      </a>
+      <a href="https://www.instagram.com/">
+        <Instagram
+          className={`${classes.svg} ${
+            scrolled ? classes.svgScroll : classes.svgNotScroll
+          }`}
+        />
+      </a>
+      <a href="https://web.facebook.com/?ref=tn_tnmn">
+        <Facebook
+          className={`${classes.svg} ${
+            scrolled ? classes.svgScroll : classes.svgNotScroll
+          }`}
+        />
+      </a>
     </div>
   );
 };

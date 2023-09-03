@@ -4,10 +4,18 @@ const Order = (props) => {
     <li className={classes.order}>
       <div>
         <h3>
-          <section>Date: {props.date}</section>
-          <section>Time: {props.time}</section>
+          <section>
+            <span className={classes.heading}>Date:</span> {props.date}
+          </section>
+          <section>
+            <span className={classes.heading}>Time:</span> {props.time}
+          </section>
         </h3>
-        <div className={classes.summary}>Order Summary: {props.summary}</div>
+
+        <div className={classes.summary}>
+          <span className={classes.heading}>Order Summary:</span>
+          {props.summary}
+        </div>
         <div className={classes.price}>Total: {props.total}</div>
       </div>
     </li>

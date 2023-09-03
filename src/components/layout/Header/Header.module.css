@@ -13,29 +13,60 @@
   background-color: black;
   height: 70px;
 }
-
+.toggle {
+  border: none;
+}
 .options {
   width: 100%;
 }
 .options > a,
-.options > div {
+.options > div,
+.options > button {
   margin-left: 20px;
 }
-.options ul {
+.options {
   margin-left: auto;
   width: 30%;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
   justify-content: space-evenly;
   min-width: fit-content;
 }
-.options li {
-  margin-left: 20px;
-}
+
 .nav {
   display: flex;
   justify-content: space-between;
   width: 80%;
   height: 100%;
   margin: auto;
+}
+.hamburger-scroll {
+  background-color: black;
+  transition: background-color 600ms ease-in-out;
+}
+.hamburger-not-scroll {
+  background-color: transparent;
+}
+@media screen and (max-width: 991px) {
+  .options {
+    width: 55px;
+    border-radius: 10px;
+  }
+  .options > a,
+  .options > button {
+    margin: 0 auto;
+  }
+  .options > button {
+    width: 36px;
+    transform: translateX(1px);
+  }
+
+  .options > div,
+  .options > a,
+  .options > button {
+    margin-bottom: 20px;
+  }
+  .options > div {
+    transform: translateX(-3px);
+  }
 }

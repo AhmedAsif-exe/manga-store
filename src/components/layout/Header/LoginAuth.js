@@ -20,7 +20,7 @@ const LoginAuth = () => {
   return (
     <Fragment>
       {!token && (
-        <Link to="/auth">
+        <Link to="/auth" className="middle-child">
           <Login className={classes.login} />
         </Link>
       )}

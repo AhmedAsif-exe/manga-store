@@ -50,6 +50,11 @@ const CartCard = (props) => {
         <span>{totalAmount}</span>
       </div>
       <div className={classes.actions}>
+        {hasItems && (
+          <button className={classes.button} onClick={orderHandler}>
+            Checkout
+          </button>
+        )}
         <button
           className={classes["button--alt"]}
           onClick={() => navigate("/")}
@@ -57,11 +62,6 @@ const CartCard = (props) => {
           Cancel
         </button>
 
-        {hasItems && (
-          <button className={classes.button} onClick={orderHandler}>
-            Checkout
-          </button>
-        )}
         {showForm && <UserForm />}
       </div>
     </Fragment>

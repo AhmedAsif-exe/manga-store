@@ -23,5 +23,8 @@
   }
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 324px) {
+  .title {
+    font-size: 1.25em;
+  }
 }

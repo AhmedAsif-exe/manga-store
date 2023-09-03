@@ -447,16 +447,7 @@
     opacity: 0;
   }
 }
-.dribbble {
-  position: fixed;
-  display: block;
-  right: 20px;
-  bottom: 20px;
-}
-.dribbble img {
-  display: block;
-  height: 28px;
-}
+
 @media screen and (max-width: 460px) {
   .order {
     width: 90%;

@@ -11,7 +11,7 @@
   position: absolute;
   top: 0;
   padding: 2.5em;
-  padding-top: 8em;
+  padding-top: 7em;
   background-color: rgba(0, 0, 0, 0.379);
   width: 40%;
   min-height: 100%;
@@ -29,7 +29,6 @@
 
 .dataHolder h2 {
   margin: 0 auto;
-  /* margin: 0em 1em 0 3em; */
   font-weight: 600;
   font-size: 40px;
   color: red;
@@ -63,15 +62,15 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   .dataHolder h2 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .price {
-    font-size: 30px;
+    font-size: 20px;
   }
   .synopsis {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -89,5 +88,23 @@
   }
   .synopsis {
     margin-top: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .author {
+    margin-bottom: 0.5em;
+    font-style: italic;
+  }
+  .synopsis {
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .author {
+    margin-bottom: 0.25em;
+    font-size: 16px;
+  }
+  .synopsis {
+    font-size: 16px;
   }
 }

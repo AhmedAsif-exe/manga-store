@@ -23,20 +23,21 @@ const Header = (props) => {
           <Navbar.Brand>
             <Title />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            className={classes.toggle}
+          />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className={classes.options}>
-              <ul className={"navbar-nav"}>
-                <li className={"nav-link"}>
-                  <CartIcon />
-                </li>
-                <li className={"nav-link"}>
-                  <LoginAuth />
-                </li>
-                <li className={"nav-link"}>
-                  <SearchBar />
-                </li>
-              </ul>
+            <Nav
+              className={`${classes.options} ${
+                scrolled
+                  ? classes["hamburger-scroll"]
+                  : classes["hamburger-not-scroll"]
+              }`}
+            >
+              <CartIcon />
+              <LoginAuth />
+              <SearchBar />
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -45,3 +45,15 @@
   );
   color: white;
 }
+@media screen and (max-width: 485px) {
+  .actions button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .total {
+    flex-direction: column;
+  }
+}

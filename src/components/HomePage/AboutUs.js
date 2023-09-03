@@ -20,17 +20,17 @@ const AboutUs = () => {
     window.removeEventListener("scroll", () => setSmall(window.scrollY > 200));
   return (
     <section className={classes.container}>
-      <div className={classes.dataholder}>
-        <div className={classes.image}>
-          <img src={AU} alt="it tells about us" />
-        </div>
-        <div className={classes.cardholder}>
-          {small && (
-            <Card
-              className={`${classes.details} ${
-                small ? classes["slide-up"] : ""
-              }`}
-            >
+      {small && (
+        <div
+          className={`${classes.dataholder} ${
+            small ? classes["slide-up"] : ""
+          }`}
+        >
+          <div className={classes.image}>
+            <img src={AU} alt="it tells about us" />
+          </div>
+          <div className={classes.cardholder}>
+            <Card className={"classes.details"}>
               <h2>About Us</h2>
               <div className={classes.dots}>
                 <Dot />
@@ -46,9 +46,9 @@ const AboutUs = () => {
                 doorstep.
               </p>
             </Card>
-          )}
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };
