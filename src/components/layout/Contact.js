@@ -1,37 +1,18 @@
-import Discord from "../utils/icons/Discord";
-import Instagram from "../utils/icons/Instagram";
-import Facebook from "../utils/icons/Facebook";
+import Discord from "../utils/icons/Discord.svg";
+import Instagram from "../utils/icons/Instagram.svg";
+import Facebook from "../utils/icons/Facebook.svg";
 import classes from "./Contact.module.css";
-import useScroll from "../../Hooks/use_scroll";
 const Contact = (props) => {
-  const { scrolled } = useScroll(200);
-
   return (
-    <div
-      className={`${scrolled ? classes.scroll : classes.notScroll} ${
-        classes.container
-      }`}
-    >
+    <div className={classes.container}>
       <a href="https://discord.com/">
-        <Discord
-          className={`${classes.svg} ${
-            scrolled ? classes.svgScroll : classes.svgNotScroll
-          }`}
-        />
+        <img src={Discord} />
       </a>
       <a href="https://www.instagram.com/">
-        <Instagram
-          className={`${classes.svg} ${
-            scrolled ? classes.svgScroll : classes.svgNotScroll
-          }`}
-        />
+        <img src={Instagram} />
       </a>
       <a href="https://web.facebook.com/?ref=tn_tnmn">
-        <Facebook
-          className={`${classes.svg} ${
-            scrolled ? classes.svgScroll : classes.svgNotScroll
-          }`}
-        />
+        <img src={Facebook} />
       </a>
     </div>
   );

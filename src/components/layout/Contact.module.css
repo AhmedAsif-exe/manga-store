@@ -1,12 +1,6 @@
-.scroll {
+.container {
   margin: 35vh 0;
   height: 30vh;
-}
-.notScroll {
-  margin: 30vh 0;
-  height: 40vh;
-}
-.container {
   margin-left: 95%;
   width: 5%;
   min-width: 35px;
@@ -21,12 +15,6 @@
 }
 .container > a {
   all: unset;
-}
-.svgNotScroll {
-  color: white;
-}
-.svgScroll {
-  color: rgb(97, 99, 94);
 }
 .svg {
   cursor: pointer;
