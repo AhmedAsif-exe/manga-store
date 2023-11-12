@@ -42,7 +42,7 @@
 }
 .hamburger-scroll {
   background-color: black;
-  transition: background-color 600ms ease-in-out;
+  transition: background-color 600ms ease-in;
 }
 .hamburger-not-scroll {
   background-color: transparent;

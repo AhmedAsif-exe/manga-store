@@ -7,55 +7,6 @@
   overflow: hidden;
 }
 
-.box::before,
-.box::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 380px;
-  height: 420px;
-  z-index: 1;
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-  background: linear-gradient(0deg, transparent, blue, blue, blue);
-}
-.box::after {
-  animation-delay: -3s;
-}
-.box__borderline {
-  position: absolute;
-  top: 0;
-  inset: 0;
-}
-.box__borderline::before,
-.box__borderline::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 380px;
-  height: 420px;
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-  z-index: 1;
-  background: linear-gradient(0deg, transparent, red, red, red);
-}
-.box__borderline::before {
-  animation-delay: -1.5s;
-}
-.box__borderline::after {
-  animation-delay: -4.5s;
-}
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .form {
   position: absolute;
   inset: 4px;

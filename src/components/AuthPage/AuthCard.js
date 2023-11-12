@@ -28,8 +28,6 @@ const AuthCard = ({ logIn, data }) => {
   }`;
   return (
     <div className={classes.box}>
-      <span className={classes.box__borderline}></span>
-
       <Form className={classes.form} method="POST">
         <h2 className={classes.form__title}> {logIn ? "Log In" : "Sign Up"}</h2>
         {credentialErrors.credentials && (
