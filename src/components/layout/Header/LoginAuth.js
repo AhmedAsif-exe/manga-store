@@ -1,8 +1,8 @@
 import classes from "./LoginAuth.module.css";
 import { Fragment, useState, useEffect } from "react";
 import { useRouteLoaderData, Link } from "react-router-dom";
-import User from "../../utils/icons/User";
-import Login from "../../utils/icons/Login";
+import User from "../../utils/icons/User.svg";
+import Login from "../../utils/icons/Login.svg";
 import UserOptions from "./UserOptions";
 const LoginAuth = () => {
   const [show, setShow] = useState(false);
@@ -20,13 +20,21 @@ const LoginAuth = () => {
   return (
     <Fragment>
       {!token && (
-        <Link to="/auth" className="middle-child">
-          <Login className={classes.login} />
+        <Link
+          to="/auth"
+          className={`middle-child ${classes.login}`}
+          style={{ width: "fit-content", height: "fit-content" }}
+        >
+          <img src={Login} alt="login" />
         </Link>
       )}
       {token && (
-        <button className={classes.logout} type="submit" onClick={clickHandler}>
-          <User className={classes.user} />
+        <button
+          className={`${classes.logout} ${classes.user}`}
+          type="submit"
+          onClick={clickHandler}
+        >
+          <img src={User} alt="user" />
         </button>
       )}
       {show && <UserOptions onClose={closeHandler} />}

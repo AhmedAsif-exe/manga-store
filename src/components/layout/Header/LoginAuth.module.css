@@ -1,21 +1,11 @@
-.login,
-.user {
-  height: 2.25em;
-  width: 2.5em;
-  color: white;
+.login > img,
+.user > img {
+  height: 32px;
+  width: 32px;
+}
 
-  transition: color 300ms ease-in;
-}
-.user {
-  transform: translateY(-3px);
-}
-.login {
-  transform: translateY(-3px);
-}
-.login:hover,
-.user:hover {
-  color: red;
-}
 .logout {
   all: unset;
+  height: fit-content;
+  width: fit-content;
 }

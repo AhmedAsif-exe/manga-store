@@ -22,7 +22,7 @@ const SearchBar = () => {
           </label>
 
           <button className={classes["search__submit"]} aria-label="Search">
-            <SearchIcon />
+            <SearchIcon className={classes.svg} />
           </button>
         </div>
       </form>
