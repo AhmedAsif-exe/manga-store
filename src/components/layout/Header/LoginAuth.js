@@ -6,7 +6,7 @@ import Login from "../../utils/icons/Login.svg";
 import UserOptions from "./UserOptions";
 const LoginAuth = () => {
   const [show, setShow] = useState(false);
-
+  console.log(window.innerHeight, window.innerWidth);
   const token = useRouteLoaderData("layout");
   useEffect(() => {
     setShow(false);
