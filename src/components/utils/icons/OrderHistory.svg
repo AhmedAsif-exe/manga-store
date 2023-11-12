@@ -1,5 +1,5 @@
 <svg
-      className={props.className}
+
       height="21px"
       version="1.1"
       viewBox="0 0 20 21"
@@ -11,14 +11,13 @@
       <desc />
       <defs />
       <g
-        fill="none"
-        fillRule="evenodd"
+      fill="#d9dadb"
+             fillRule="evenodd"
         id="Page-1"
         stroke="none"
         strokeWidth="1"
       >
         <g
-          fill="currentColor"
           id="Core"
           opacity="0.9"
           transform="translate(-464.000000, -254.000000)"

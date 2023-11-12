@@ -18,9 +18,7 @@
   transition: color 300ms ease-in-out;
   margin: 0 auto;
 }
-.container > div:hover {
-  color: red;
-}
+
 .order {
   height: 5em;
   width: 5em;
