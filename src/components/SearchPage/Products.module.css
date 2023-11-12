@@ -1,6 +1,7 @@
 .card {
   width: 90%;
   height: fit-content;
+  min-height: 730px;
   margin: 0 auto;
   margin-bottom: 2em;
   background: linear-gradient(
@@ -17,18 +18,26 @@
 }
 .card > h3:hover {
   text-overflow: none;
-  animation: slideShow 5s linear infinite;
+  animation-name: slideShow, rebound;
+  animation-delay: 0, 4s;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 @keyframes slideShow {
-  0% {
+  from {
     transform: translateX(0);
   }
 
-  50% {
-    transform: translateX(-100%);
+  to {
+    transform: translateX(-110%);
+  }
+}
+@keyframes rebound {
+  from {
+    transform: translateX(110%);
   }
 
-  100% {
+  to {
     transform: translateX(0);
   }
 }
