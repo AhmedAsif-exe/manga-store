@@ -30,7 +30,7 @@ const AboutUs = () => {
             <img src={AU} alt="it tells about us" />
           </div>
           <div className={classes.cardholder}>
-            <Card className={"classes.details"}>
+            <Card className={classes.details}>
               <h2>About Us</h2>
               <div className={classes.dots}>
                 <Dot />
