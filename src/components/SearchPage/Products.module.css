@@ -8,6 +8,29 @@
     rgba(27, 30, 98, 1) 0%,
     rgba(179, 25, 25, 1) 100%
   );
+  overflow: hidden;
+}
+.card > h3 {
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide any content that overflows the container */
+  text-overflow: ellipsis; /* Display an ellipsis (...) when content overflows */
+}
+.card > h3:hover {
+  text-overflow: none;
+  animation: slideShow 5s linear infinite;
+}
+@keyframes slideShow {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 .title {
   text-align: center;

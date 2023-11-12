@@ -32,12 +32,21 @@
   font-weight: 600;
   font-size: 40px;
   color: red;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .synopsis {
   margin-top: 10px;
   font-weight: bold;
   line-height: 35px;
   font-size: 28px;
+  max-height: 30vh; /* Set the maximum height */
+  overflow: hidden; /* Hide content that overflows the container */
+  text-overflow: ellipsis; /* Display an ellipsis (...) when content overflows */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
 }
 .author {
   font-size: 20px;
