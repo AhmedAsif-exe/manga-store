@@ -9,6 +9,7 @@ const Products = ({ result }) => {
   return (
     <Card className={classes.card}>
       <h3 className={classes.title}>{result.title || "Title Not Found"}</h3>
+
       <div className={classes.container}>
         <ProductInfo
           src={result.images.image_url}

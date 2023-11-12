@@ -11,16 +11,17 @@
   );
   overflow: hidden;
 }
+
 .card > h3 {
-  white-space: nowrap; /* Prevent line breaks */
+  white-space: nowrap;
   overflow: hidden; /* Hide any content that overflows the container */
   text-overflow: ellipsis; /* Display an ellipsis (...) when content overflows */
 }
 .card > h3:hover {
-  text-overflow: none;
+  overflow: visible;
   animation-name: slideShow, rebound;
-  animation-delay: 0, 4s;
-  animation-duration: 4s;
+  animation-delay: 0s, 12s;
+  animation-duration: 12s, 4s;
   animation-iteration-count: infinite;
 }
 @keyframes slideShow {
@@ -29,12 +30,12 @@
   }
 
   to {
-    transform: translateX(-110%);
+    transform: translateX(-300%);
   }
 }
 @keyframes rebound {
   from {
-    transform: translateX(110%);
+    transform: translateX(100%);
   }
 
   to {
