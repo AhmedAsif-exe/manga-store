@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/traverse": "^7.23.3",
     "@mantine/core": "^7.2.1",
     "@mantine/hooks": "^7.2.1",
     "@testing-library/jest-dom": "^5.17.0",
