@@ -25,7 +25,7 @@ const LoginAuth = () => {
           className={`middle-child ${classes.login}`}
           style={{ width: "fit-content", height: "fit-content" }}
         >
-          <img src={Login} alt="login" />
+          <img loading="lazy" src={Login} alt="login" />
         </Link>
       )}
       {token && (
@@ -34,7 +34,7 @@ const LoginAuth = () => {
           type="submit"
           onClick={clickHandler}
         >
-          <img src={User} alt="user" />
+          <img loading="lazy" src={User} alt="user" />
         </button>
       )}
       {show && <UserOptions onClose={closeHandler} />}

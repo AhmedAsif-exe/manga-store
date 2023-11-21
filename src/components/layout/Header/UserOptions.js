@@ -12,6 +12,7 @@ const UserOptions = (props) => {
         <div>
           <Link to={"/orders"} className={classes.link} onClick={props.onClose}>
             <img
+              loading="lazy"
               src={OrderHistory}
               className={classes.order}
               alt="orderhistory icon"
@@ -22,7 +23,12 @@ const UserOptions = (props) => {
         <div>
           <fetcher.Form method="POST" action="/logout">
             <button>
-              <img src={Logout} className={classes.order} alt="logout icon" />
+              <img
+                loading="lazy"
+                src={Logout}
+                className={classes.order}
+                alt="logout icon"
+              />
               <p>Log Out</p>
             </button>
           </fetcher.Form>

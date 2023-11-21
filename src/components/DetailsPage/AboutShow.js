@@ -10,7 +10,11 @@ const AboutShow = ({
 }) => {
   return (
     <div className={classes["about-show"]}>
-      <img src={img} alt={`${img ? "Manga" : "Image Not Found"}`} />
+      <img
+        loading="lazy"
+        src={img}
+        alt={`${img ? "Manga" : "Image Not Found"}`}
+      />
       <h3 className={classes.heading}>Information</h3>
       <p>
         <span className={classes.attributes}>Type: </span>

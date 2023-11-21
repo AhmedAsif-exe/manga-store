@@ -6,13 +6,13 @@ const Contact = (props) => {
   return (
     <div className={classes.container}>
       <a href="https://discord.com/">
-        <img src={Discord} />
+        <img loading="lazy" src={Discord} />
       </a>
       <a href="https://www.instagram.com/">
-        <img src={Instagram} />
+        <img loading="lazy" src={Instagram} />
       </a>
       <a href="https://web.facebook.com/?ref=tn_tnmn">
-        <img src={Facebook} />
+        <img loading="lazy" src={Facebook} />
       </a>
     </div>
   );

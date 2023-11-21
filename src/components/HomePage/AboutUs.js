@@ -27,7 +27,7 @@ const AboutUs = () => {
           }`}
         >
           <div className={classes.image}>
-            <img src={AU} alt="it tells about us" />
+            <img loading="lazy" src={AU} alt="it tells about us" />
           </div>
           <div className={classes.cardholder}>
             <Card className={classes.details}>

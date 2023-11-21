@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ProductInfo = ({ src, synopsis, author, price, id }) => {
   return (
     <Fragment>
-      <img src={src} alt="title" />
+      <img loading="lazy" src={src} alt="title" />
       <div className={classes.synopsis}>
         <p>
           {synopsis || "Synopsis Not Found"}...

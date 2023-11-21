@@ -7,6 +7,7 @@ const Recommendations = ({ details }) => {
   return (
     <div className={classes.container}>
       <img
+        loading="lazy"
         src={details.src}
         alt={"background"}
         className={classes.background}
