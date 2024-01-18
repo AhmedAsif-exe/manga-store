@@ -16,7 +16,6 @@ const ErrorPage = (props) => {
   }
   if (error.status === 401)
     message = "You Are Not Authorized For The Following Action";
-  console.log(error.status);
   return (
     <Layout>
       <div className={classes.wrapper}>

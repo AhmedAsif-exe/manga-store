@@ -1,0 +1,6 @@
+.contact {
+  display: flex;
+  margin: 10vh auto;
+  justify-content: space-evenly;
+  max-width: 60vw;
+}

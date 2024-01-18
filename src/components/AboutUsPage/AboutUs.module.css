@@ -1,0 +1,16 @@
+.body {
+  padding: 15vh 10vh 0;
+}
+.body h1,
+.body h2 {
+  font-family: "Poppins", sans-serif;
+}
+.span {
+  margin: 1%;
+}
+.qualities {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}

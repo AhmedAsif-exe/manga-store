@@ -12,6 +12,7 @@ import OrdersHistory, {
   loader as orderLoader,
   action as orderAction,
 } from "./pages/OrderHistory";
+import AboutUsPage from "./pages/AboutUsPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
         element: <OrdersHistory />,
         loader: orderLoader,
         action: orderAction,
+      },
+      {
+        path: "about-us",
+        element: <AboutUsPage />,
       },
     ],
   },

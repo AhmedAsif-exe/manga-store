@@ -1,5 +1,4 @@
 import Header from "./Header/Header";
-import Contact from "./Contact";
 import BackToTop from "./BackToTop";
 import useScroll from "../../Hooks/use_scroll";
 import Footer from "./Footer/Footer";
@@ -37,8 +36,7 @@ const Layout = (props) => {
         <Header />
         <main>
           <Outlet />
-          {props.children || null}
-          <Contact />
+          {props?.children}
           <BackToTop scrolled={scrolled} clickHandler={clickHandler} />
         </main>
       </CartProvider>

@@ -37,12 +37,7 @@
   text-overflow: ellipsis;
 }
 .synopsis {
-  margin-top: 10px;
-  font-weight: bold;
-  line-height: 35px;
-  font-size: 28px;
   max-height: 30vh; /* Set the maximum height */
-  overflow: hidden; /* Hide content that overflows the container */
 }
 .author {
   font-size: 20px;
@@ -62,9 +57,6 @@
   .price {
     font-size: 35px;
   }
-  .synopsis {
-    font-size: 25px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -73,9 +65,6 @@
   }
   .price {
     font-size: 20px;
-  }
-  .synopsis {
-    font-size: 15px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -100,16 +89,10 @@
     margin-bottom: 0.5em;
     font-style: italic;
   }
-  .synopsis {
-    line-height: 25px;
-  }
 }
 @media screen and (max-width: 350px) {
   .author {
     margin-bottom: 0.25em;
-    font-size: 16px;
-  }
-  .synopsis {
     font-size: 16px;
   }
 }

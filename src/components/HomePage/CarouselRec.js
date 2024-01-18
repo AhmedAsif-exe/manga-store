@@ -2,16 +2,9 @@ import monster from "../../images/recommendations/monster.png";
 import Berserk from "../../images/recommendations/Berserk.jpg";
 import TCB from "../../images/recommendations/TCB.jpg";
 import VS from "../../images/recommendations/VS.jpg";
-
-import Carousel from "react-bootstrap/Carousel";
+import { Carousel } from "@mantine/carousel";
 import Recommendations from "./Recommendations";
-import { useState } from "react";
 const CarouselRec = () => {
-  const [index, setIndex] = useState(0);
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
   const titles = [
     {
       mal_id: "1",
@@ -49,12 +42,12 @@ const CarouselRec = () => {
   ];
 
   return (
-    <Carousel activeIndex={index} controls={false} onSelect={handleSelect}>
-      {titles.map((title, i) => {
+    <Carousel height={"100vh"} withControls={false} withIndicators={true}>
+      {titles.map((title) => {
         return (
-          <Carousel.Item interval={10000} key={title.mal_id}>
+          <Carousel.Slide key={title.mal_id}>
             <Recommendations details={{ ...title }} />
-          </Carousel.Item>
+          </Carousel.Slide>
         );
       })}
     </Carousel>

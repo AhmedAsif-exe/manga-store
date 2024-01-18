@@ -2,10 +2,9 @@
   cursor: pointer;
   color: white;
   display: inline-block;
-  font-size: 2em;
-  margin: auto 0em;
-  height: 50px;
-  width: 28%;
+  font-size: clamp(20px, 2.734vw, 35px);
+  height: fit-content;
+  margin: 0 auto;
 }
 .svg {
   width: 0.75em;
@@ -14,17 +13,4 @@
 }
 .highlight-red {
   color: red;
-}
-@media screen and (max-width: 994px) {
-  .title {
-    height: 37.5px;
-    font-size: 1.5em;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 324px) {
-  .title {
-    font-size: 1.25em;
-  }
 }

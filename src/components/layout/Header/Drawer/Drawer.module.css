@@ -1,0 +1,28 @@
+.drawer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: fit-content;
+  min-width: 70px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  flex-direction: column;
+  background-color: black;
+  animation: slide 300ms linear 1; /* Apply the animation */
+  z-index: -1;
+}
+.drawer > a,
+.drawer > button,
+.drawer > div {
+  align-self: center;
+  margin: 30px 0;
+}
+@keyframes slide {
+  from {
+    right: -70px;
+  }
+  to {
+    right: 0;
+  }
+}

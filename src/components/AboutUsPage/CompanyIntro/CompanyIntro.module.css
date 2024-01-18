@@ -1,0 +1,9 @@
+.company-intro {
+  display: flex;
+  padding: 2vh 0;
+}
+
+.company-intro > p {
+  font-size: clamp(12px, 1.75vw, 15px);
+  padding: 3vh;
+}
