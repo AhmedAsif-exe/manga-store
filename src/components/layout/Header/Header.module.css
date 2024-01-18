@@ -44,10 +44,7 @@
     display: initial;
   }
 }
-.info > img {
-  height: "32px";
-  width: "32px";
-}
+
 .info {
   transform: translateY(2px);
 }
